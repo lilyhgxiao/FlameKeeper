@@ -4729,7 +4729,7 @@ GameObject:
   - component: {fileID: 1124563441}
   - component: {fileID: 1124563440}
   - component: {fileID: 1124563439}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5547,6 +5547,9 @@ MonoBehaviour:
   sidewaysSpeed: 10
   jumpForce: 2.5
   warmth: 50
+  ground:
+    serializedVersion: 2
+    m_Bits: 1024
   startingLanternUses: 6
   maxLanternUses: 6
   postProcessing: {fileID: 11400000, guid: b0cdcb16a2a56f2408bf2ca774feb9ff, type: 2}
