@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float sidewaysSpeed;
     public float jumpForce;
     public float warmth = 50;   // 0 to 100
+    public LayerMask ground;
 
     public int startingLanternUses = 3;
     public int maxLanternUses = 3;
@@ -20,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private int currentLanternUses;
 
     private Rigidbody rb;
-    private bool isGrounded;
+    private SphereCollider collider;
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour
         postProcessing.vignette.settings = vignette;
 
         rb = GetComponent<Rigidbody>();
-        isGrounded = true;
+        collider = GetComponent<SphereCollider>();
     }
 
     private void OnApplicationQuit()
@@ -122,16 +123,15 @@ public class PlayerController : MonoBehaviour
         {
             this.rb.AddForce(-sidewaysSpeed, 0, 0);
         }
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded())
         {
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
-            isGrounded = false;
         }
     }
 
-    private void OnCollisionStay(Collision collision)
+    private bool Grounded()
     {
-        isGrounded = true;
+        return Physics.CheckSphere(transform.position, collider.radius, ground);
     }
 
     private void OnTriggerEnter(Collider other)
