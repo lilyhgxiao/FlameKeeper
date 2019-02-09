@@ -6,7 +6,8 @@ public class WaterCollision : MonoBehaviour
 {
     
     public float waitTime = 3f;
-    public GameObject player;
+    public int inWaterSpeed;
+    private int outOfWaterSpeed;
     private bool playerTouching;
     private bool playerAlive;
     float timer;
@@ -16,6 +17,7 @@ public class WaterCollision : MonoBehaviour
     {
         playerTouching = false;
         playerAlive = true;
+        outOfWaterSpeed = this.GetComponent<Player>().forceMagnitude;
     }
 
     // Update is called once per frame
@@ -24,10 +26,10 @@ public class WaterCollision : MonoBehaviour
         if (playerTouching && playerAlive)
         {
             timer += Time.deltaTime;
-            player.GetComponent<Renderer>().material.color = Color.blue;
+            this.GetComponent<Renderer>().material.color = Color.blue;
             if (timer > waitTime)
             {
-                player.GetComponent<Renderer>().material.color = Color.red;
+                this.GetComponent<Renderer>().material.color = Color.red;
                 playerAlive = false;
                 timer = 0f;
             }
@@ -40,21 +42,24 @@ public class WaterCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("Water"))
         {
             return;
         }
         playerTouching = true;
+
+        this.GetComponent<Player>().SetSpeed(inWaterSpeed);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Player"))
+        if (!other.CompareTag("Water"))
         {
             return;
         }
         playerTouching = false;
         playerAlive = true;
-        player.GetComponent<Renderer>().material.color = Color.white;
+        this.GetComponent<Renderer>().material.color = Color.white;
+        this.GetComponent<Player>().SetSpeed(outOfWaterSpeed);
     }
 }
