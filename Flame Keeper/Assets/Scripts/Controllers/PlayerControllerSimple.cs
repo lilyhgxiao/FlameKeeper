@@ -28,16 +28,7 @@ public class PlayerControllerSimple : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetInput();
 
-        if (Mathf.Abs(input.x) == 0 && Mathf.Abs(input.y) == 0)
-        {
-            return;
-        }
-
-        CalculateDirection();
-        Rotate();
-        Move();
     }
 
     private void GetInput()
@@ -71,6 +62,21 @@ public class PlayerControllerSimple : MonoBehaviour
             Debug.Log("Pressed A");
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
         }
+
+        GetInput();
+
+        if (Mathf.Abs(input.x) == 0 && Mathf.Abs(input.y) == 0)
+        {
+            return;
+        }
+
+        CalculateDirection();
+        Rotate();
+        Move();
+
+        RaycastHit hit;
+        Physics.Raycast(this.transform.position, Vector3.down, out hit);
+        transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.right, hit.normal));
     }
 
     private bool Grounded()

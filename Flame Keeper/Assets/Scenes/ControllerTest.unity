@@ -539,6 +539,11 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8390364619375794819, guid: 7f91f5a4125f0214298d6d4700a61aff,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 8390364618518155529, guid: 7f91f5a4125f0214298d6d4700a61aff,
         type: 3}
       propertyPath: m_IsActive
@@ -549,8 +554,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8390364619099240885, guid: 7f91f5a4125f0214298d6d4700a61aff, type: 3}
+    - target: {fileID: 8390364619099240885, guid: 7f91f5a4125f0214298d6d4700a61aff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f91f5a4125f0214298d6d4700a61aff, type: 3}
 --- !u!1 &1244703094
 GameObject:
@@ -564,9 +573,9 @@ GameObject:
   - component: {fileID: 1244703097}
   - component: {fileID: 1244703096}
   - component: {fileID: 1244703095}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Slope
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,14 +727,14 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 778508835}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1677594660
+--- !u!114 &1677594664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677594659}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff528cdc2010c8c4892008e24db1f38e, type: 3}
   m_Name: 

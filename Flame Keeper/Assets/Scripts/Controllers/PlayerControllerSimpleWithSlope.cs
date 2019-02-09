@@ -37,9 +37,7 @@ public class PlayerControllerSimpleWithSlope : MonoBehaviour
             return;
         }
 
-        CalculateDirection();
-        Rotate();
-        Move();
+
     }
 
     private void GetInput()
@@ -74,12 +72,12 @@ public class PlayerControllerSimpleWithSlope : MonoBehaviour
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
         }
 
+        CalculateDirection();
+        Rotate();
+        Move();
+
         Physics.Raycast(this.transform.position, Vector3.down, out hit);
-        float rotationAngle = Vector3.Angle(hit.normal, transform.up);
-Debug.Log("Rotation angle: " + rotationAngle);
-Debug.Log("Current rotation: " + transform.rotation);
-        transform.Rotate(new Vector3(rotationAngle, 0, 0));
-Debug.Log("New rotation: " + transform.rotation);
+        //transform.rotation = Quaternion.LookRotation(Vector3.Cross(transform.right, hit.normal));
     }
 
     private bool Grounded()
