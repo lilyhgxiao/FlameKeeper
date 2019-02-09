@@ -40,4 +40,8 @@ public class Player : MonoBehaviour
         body.velocity = vel;
     }
 
+    public void SetSpeed(int newSpeed)
+    {
+        forceMagnitude = newSpeed;
+    }
 }
