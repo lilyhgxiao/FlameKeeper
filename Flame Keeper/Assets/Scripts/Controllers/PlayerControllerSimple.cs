@@ -34,6 +34,7 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
     public float jumpForce = 1.0f;
     public float gravityModifier = 1.0f;
     public LayerMask ground;
+    public GameObject cameraHolder;
 
     private float lockMovementTime = 0.0f;
     private Rigidbody rb;
@@ -235,6 +236,15 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
             //warmth += ;
             other.gameObject.SetActive(false);
         }
+        /*
+        if (other.gameObject.name.Equals("TextTriggerMovement"))
+        {
+            Debug.Log("Entered TextTriggerMovement");
+            StartCoroutine(cameraHolder.GetComponent<CameraController>().PanCamera2(cameraHolder.GetComponent<CameraController>().panList[0]));
+            //cameraHolder.GetComponent<CameraController>().PanCamera(cameraHolder.GetComponent<CameraController>().panList[0]);
+            Debug.Log("Passed Method Call");
+        } 
+        */
     }
 
     public void ScaleLightSource(float percent)
