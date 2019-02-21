@@ -40,6 +40,9 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
     private CapsuleCollider capsuleCollider;
     private Vector3 lastGroundedPosition;
 
+    private CharacterController characterController;
+    private Animator animator;
+
     public void Setup(Vector3 startingPosition, int startingLanternUses, int maxLanternUses)
     {
         this.transform.position = startingPosition;
@@ -57,6 +60,9 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
         levelCamera = Camera.main.transform;
+
+        characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
     }
 
 
@@ -185,16 +191,26 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
         }
 
+        if (Input.GetButton(StringConstants.Input.ActivateButton))
+        {
+            //Debug.Log("Pressed X");
+            animator.SetInteger("State", 2);
+            //Debug.Log(animator.GetInteger("State"));
+            return;
+        }
+
         GetInput();
 
         if (Mathf.Abs(input.x) == 0 && Mathf.Abs(input.y) == 0)
         {
+            animator.SetInteger("State", 0);
             return;
         }
 
         CalculateDirection();
         Rotate();
         Move();
+        animator.SetInteger("State", 1);
     }
 
     private bool Grounded()
