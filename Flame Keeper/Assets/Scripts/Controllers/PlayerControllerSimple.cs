@@ -187,14 +187,14 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         //       Later on, add some functionality so that the player can get out of water
         if (Grounded() && Input.GetButton(StringConstants.Input.JumpButton))
         {
-            Debug.Log("Pressed A");
+            //Debug.Log("Pressed A");
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
         }
 
         if (Input.GetButton(StringConstants.Input.ActivateButton))
         {
             //Debug.Log("Pressed X");
-            animator.SetInteger("State", 2);
+            animator.SetInteger("AnimationState", 2);
             //Debug.Log(animator.GetInteger("State"));
             return;
         }
@@ -203,14 +203,17 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
 
         if (Mathf.Abs(input.x) == 0 && Mathf.Abs(input.y) == 0)
         {
-            animator.SetInteger("State", 0);
-            return;
+            animator.SetInteger("AnimationState", 0);
+            //return; // Caused movement and attack glitch. Else block also needed.
         }
-
-        CalculateDirection();
-        Rotate();
-        Move();
-        animator.SetInteger("State", 1);
+        else
+        {
+            animator.SetInteger("AnimationState", 1);
+            CalculateDirection();
+            Rotate();
+            Move();
+        }
+        Debug.Log("AnimationState = " + animator.GetInteger("AnimationState"));
     }
 
     private bool Grounded()
