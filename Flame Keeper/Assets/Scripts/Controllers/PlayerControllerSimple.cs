@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
 {
@@ -195,6 +197,7 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         {
             //Debug.Log("Pressed X");
             animator.SetInteger("AnimationState", 2);
+            //animator.SetTrigger("Attack");
             //Debug.Log(animator.GetInteger("State"));
             return;
         }
@@ -204,15 +207,14 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         if (Mathf.Abs(input.x) == 0 && Mathf.Abs(input.y) == 0)
         {
             animator.SetInteger("AnimationState", 0);
-            //return; // Caused movement and attack glitch. Else block also needed.
+            return;
         }
-        else
-        {
-            animator.SetInteger("AnimationState", 1);
-            CalculateDirection();
-            Rotate();
-            Move();
-        }
+
+        animator.SetInteger("AnimationState", 1);
+        CalculateDirection();
+        Rotate();
+        Move();
+
         Debug.Log("AnimationState = " + animator.GetInteger("AnimationState"));
     }
 
@@ -250,7 +252,7 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
     {
         if (other.gameObject.CompareTag("Crystal"))
         {
-            lanternUses += (int) other.gameObject.GetComponent<CrystalScript>().GetWarmth();
+            lanternUses += (int)other.gameObject.GetComponent<CrystalScript>().GetWarmth();
             //warmth += ;
             other.gameObject.SetActive(false);
         }
@@ -266,4 +268,5 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         this.transform.position = lastGroundedPosition;
         lockMovementTime = 1.0f;
     }
+
 }
