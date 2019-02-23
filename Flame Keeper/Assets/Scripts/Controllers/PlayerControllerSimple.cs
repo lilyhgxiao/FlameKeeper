@@ -195,10 +195,33 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
 
         if (Input.GetButton(StringConstants.Input.ActivateButton))
         {
-            //Debug.Log("Pressed X");
+
+            //Debug.Log("Pressed X"); 
+
+            /*
+            AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
+            float clipLength = 0;
+            foreach (AnimationClip clip in clips)
+            {
+                if (clip.name.Equals("WK_heavy_infantry_08_attack_B"))
+                {
+                    clipLength = clip.length;
+                }
+            }
+
             animator.SetInteger("AnimationState", 2);
+
+            do
+            {
+                clipLength -= Time.deltaTime;
+            } while (clipLength > 0);
+            */
+
             //animator.SetTrigger("Attack");
             //Debug.Log(animator.GetInteger("State"));
+            //StartCoroutine("AttackCoroutine");
+
+            animator.SetInteger("AnimationState", 2);
             return;
         }
 
@@ -269,4 +292,13 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         lockMovementTime = 1.0f;
     }
 
+    
+    private IEnumerator AttackCoroutine()
+    {
+        animator.SetInteger("AnimationState", 2);
+
+        yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length + 
+            animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+    }
+    
 }
