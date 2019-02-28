@@ -344,6 +344,100 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &86536156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1382171968602314146, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_Name
+      value: WaterSpring (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1382171968602314207, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 828628015}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: randomDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomPauseTime
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cdcec3b4eef0072498a263738ce8218c, type: 3}
 --- !u!1001 &105821112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -416,6 +510,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 828628015}
+    - target: {fileID: 6534189402702883456, guid: ef19a6508c09fff4f84dc762d0dcb235,
+        type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef19a6508c09fff4f84dc762d0dcb235, type: 3}
 --- !u!1001 &127083935
@@ -4514,6 +4613,16 @@ PrefabInstance:
       propertyPath: delay
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomPauseTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1382171968602314144, guid: cdcec3b4eef0072498a263738ce8218c,
         type: 3}
       propertyPath: startDelay.scalar
@@ -4729,6 +4838,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 828628015}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomPauseTime
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcec3b4eef0072498a263738ce8218c, type: 3}
 --- !u!64 &1314090012
@@ -16282,6 +16401,16 @@ PrefabInstance:
       propertyPath: randomDuration
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomPauseTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1382171968602314144, guid: cdcec3b4eef0072498a263738ce8218c,
         type: 3}
       propertyPath: startDelay.scalar
@@ -16924,6 +17053,16 @@ PrefabInstance:
         type: 3}
       propertyPath: randomDuration
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3593086583140055760, guid: cdcec3b4eef0072498a263738ce8218c,
+        type: 3}
+      propertyPath: enableRandomPauseTime
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdcec3b4eef0072498a263738ce8218c, type: 3}
