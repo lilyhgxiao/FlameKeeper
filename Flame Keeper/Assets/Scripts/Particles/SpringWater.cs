@@ -18,6 +18,7 @@ public class SpringWater : MonoBehaviour
     {
         particles = GetComponent<ParticleSystem>();
         particleCollisionEvents = new List<ParticleCollisionEvent>();
+        timer = -particles.main.startDelay.constant;
         particles.Play();
     }
 

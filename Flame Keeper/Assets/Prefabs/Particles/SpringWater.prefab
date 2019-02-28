@@ -4712,6 +4712,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particles: {fileID: 1382171968602314144}
-  duration: 2
-  pauseTime: 1
+  duration: 2.5
+  pauseTime: 1.5
   player: {fileID: 0}
