@@ -510,11 +510,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 828628015}
-    - target: {fileID: 6534189402702883456, guid: ef19a6508c09fff4f84dc762d0dcb235,
-        type: 3}
-      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef19a6508c09fff4f84dc762d0dcb235, type: 3}
 --- !u!1001 &127083935
