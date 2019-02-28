@@ -1,15 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class SpringWater : MonoBehaviour
 {
+    // Reference to the particle system this script is attached too.
     public ParticleSystem particles;
+    // How long the simulation lasts before looping.
     public float duration = 0.0f;
+    // How long to pause before starting next loop.
     public float pauseTime = 0.0f;
+    // Reference to player.
     public PlayerControllerSimple player;
 
+    // When true, assigns a random value to duration.
+    public bool enableRandomDuration = false;
+    // Random value bounds for duration.
+    public float minDuration = 0.0f, maxDuration = 0.0f;
+
+    // When true, assigns a random value to pauseTime.
+    public bool enableRandomPauseTime = false;
+    // Random value bounds for pauseTime.
+    public float minPauseTime = 0.0f, maxPauseTime = 0.0f;
+
+    // Used to keep track of how long a single loop of the duration is running.
     private float timer = 0.0f;
+    // Stores event information for each collided particle per collision.
     private List<ParticleCollisionEvent> particleCollisionEvents;
 
 
@@ -18,8 +35,21 @@ public class SpringWater : MonoBehaviour
     {
         particles = GetComponent<ParticleSystem>();
         particleCollisionEvents = new List<ParticleCollisionEvent>();
+        // Account for startdelay for timer. timer == 0 implies simulation starts now. 
         timer = -particles.main.startDelay.constant;
         particles.Play();
+
+        if (enableRandomDuration)
+        {
+            duration = Random.Range(minDuration, maxDuration);
+            Debug.Log("Starting Random Duration = " + duration);
+        }
+
+        if (enableRandomPauseTime)
+        {
+            pauseTime = Random.Range(minPauseTime, maxPauseTime);
+            Debug.Log("Starting Random Pause Time = " + pauseTime);
+        }
     }
 
     // Update is called once per frame
@@ -34,6 +64,19 @@ public class SpringWater : MonoBehaviour
         }
         if (timer > duration + pauseTime)
         {
+            if (enableRandomDuration)
+            {
+                duration = Random.Range(minDuration, maxDuration);
+                Debug.Log("New Random Duration = " + duration);
+            }
+
+            if (enableRandomPauseTime)
+            {
+                pauseTime = Random.Range(minPauseTime, maxPauseTime);
+                Debug.Log("New Random Pause Time = " + pauseTime);
+            }
+
+            // Want to account for extra delay time.
             timer = -particles.main.startDelay.constant;
             particles.Play();
         }

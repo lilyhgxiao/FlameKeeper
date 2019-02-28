@@ -56,7 +56,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -4715,3 +4715,9 @@ MonoBehaviour:
   duration: 2.5
   pauseTime: 1.5
   player: {fileID: 0}
+  enableRandomDuration: 0
+  minDuration: 1
+  maxDuration: 3
+  enableRandomPauseTime: 0
+  minPauseTime: 1
+  maxPauseTime: 3
