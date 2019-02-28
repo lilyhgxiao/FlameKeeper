@@ -34,7 +34,7 @@ public class SpringWater : MonoBehaviour
         }
         if (timer > duration + pauseTime)
         {
-            timer = 0.0f;
+            timer = -particles.main.startDelay.constant;
             particles.Play();
         }
         timer += Time.deltaTime;
