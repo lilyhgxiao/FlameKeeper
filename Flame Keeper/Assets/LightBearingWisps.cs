@@ -20,7 +20,7 @@ public class LightBearingWisps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnParticleCollision(GameObject other)
