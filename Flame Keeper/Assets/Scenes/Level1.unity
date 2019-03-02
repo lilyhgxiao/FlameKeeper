@@ -27440,6 +27440,7 @@ GameObject:
   - component: {fileID: 8330005255314040954}
   - component: {fileID: 8330005255314040957}
   - component: {fileID: 8330005255314040956}
+  - component: {fileID: 8330005255314040960}
   m_Layer: 0
   m_Name: Wisps
   m_TagString: Untagged
@@ -27447,6 +27448,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8330005255314040960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330005255314040959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf60e9f6a5c7c349b3970788a079b53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 0}
+  player: {fileID: 0}
+  scaleCoefficient: -0.4
 --- !u!1 &8330005255994290482
 GameObject:
   m_ObjectHideFlags: 0
@@ -27459,7 +27475,7 @@ GameObject:
   - component: {fileID: 8330005255994290484}
   m_Layer: 0
   m_Name: LightBearingWisps
-  m_TagString: Untagged
+  m_TagString: LightBearingWisps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

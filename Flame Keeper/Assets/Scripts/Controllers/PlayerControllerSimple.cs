@@ -340,9 +340,9 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
             this.SetVelocity(inWaterSpeed);
         }
 
-        if (other.gameObject.CompareTag(""))
+        if (other.gameObject.CompareTag("LightBearingWisps"))
         {
-
+            this.GetComponent<WindZone>().windMain = 10;
         }
     }
 
@@ -352,6 +352,11 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
         if (other.CompareTag("Water"))
         {
             playerTouchingWater = false;
+        }
+
+        if (other.gameObject.CompareTag("LightBearingWisps"))
+        {
+            this.GetComponent<WindZone>().windMain = -10;
         }
     }
 
