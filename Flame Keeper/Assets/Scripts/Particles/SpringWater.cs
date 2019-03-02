@@ -4,32 +4,21 @@ using UnityEngine;
 
 public class SpringWater : MonoBehaviour
 {
-    // Reference to the particle system this script is attached too.
     public ParticleSystem particles;
-    // How long the simulation lasts before looping.
     public float duration = 0.0f;
-    // How long to pause before starting next loop.
     public float pauseTime = 0.0f;
-    // Reference to player.
     public PlayerControllerSimple player;
 
-    // When true, assigns a random value to duration.
     public bool enableRandomDuration = false;
-    // Random value bounds for duration.
     public float minDuration = 0.0f, maxDuration = 0.0f;
 
-    // When true, assigns a random value to pauseTime.
     public bool enableRandomPauseTime = false;
-    // Random value bounds for pauseTime.
     public float minPauseTime = 0.0f, maxPauseTime = 0.0f;
 
     public float scaleCoefficient = 0.02f;
 
-    // Used to keep track of how long a single loop of the duration is running.
     private float timer = 0.0f;
-    // Stores event information for each collided particle per collision.
     private List<ParticleCollisionEvent> particleCollisionEvents;
-
 
     // Start is called before the first frame update
     void Start()

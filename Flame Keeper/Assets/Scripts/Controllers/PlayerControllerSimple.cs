@@ -35,6 +35,8 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
     public float gravityModifier = 1.0f;
     public LayerMask ground;
 
+    public float windzoneMain = -10.0f;
+
     private float lockMovementTime = 0.0f;
     private Rigidbody rb;
     private CapsuleCollider capsuleCollider;
@@ -336,6 +338,11 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
             checkWaterStatus = true;
             playerTouchingWater = true;
             this.SetVelocity(inWaterSpeed);
+        }
+
+        if (other.gameObject.CompareTag(""))
+        {
+
         }
     }
 
