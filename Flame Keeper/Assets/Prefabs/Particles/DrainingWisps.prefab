@@ -975,7 +975,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -3766,7 +3766,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 1
+    enabled: 0
     ratio: 1
     light: {fileID: 7990699426122960783, guid: 4266355aac4097d4e9dd9f47445d9f2a, type: 3}
     randomDistribution: 1
@@ -4844,8 +4844,9 @@ GameObject:
   - component: {fileID: 8330005255952116616}
   - component: {fileID: 8330005255952116623}
   - component: {fileID: 8330005255952116622}
+  - component: {fileID: 367716746}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: Wisps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9550,3 +9551,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &367716746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330005255952116621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350ee48601773a847b2afa9b0e1ab5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particles: {fileID: 8330005255952116623}
+  player: {fileID: 0}
+  scaleCoefficient: 0.4

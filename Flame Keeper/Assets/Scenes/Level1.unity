@@ -831,7 +831,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1335
+    m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5795,27 +5795,27 @@ PrefabInstance:
     - target: {fileID: 6308676469548801159, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1455143110472081391, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1455143110534954365, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1455143111935879375, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1455143112474005929, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1455143112474005928, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
@@ -5825,7 +5825,7 @@ PrefabInstance:
     - target: {fileID: 7187418968818878514, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d71c2ba1fa1eb14d95a6999b63cfe0e, type: 3}
@@ -18008,22 +18008,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 567375156769320160, guid: 61c009e6a0643514eb9f24f1f9defaf9,
-        type: 3}
-      propertyPath: LightsModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 567375156769320160, guid: 61c009e6a0643514eb9f24f1f9defaf9,
-        type: 3}
-      propertyPath: LightsModule.light
+    - target: {fileID: 367716746, guid: 61c009e6a0643514eb9f24f1f9defaf9, type: 3}
+      propertyPath: player
       value: 
-      objectReference: {fileID: 7990699426122960783, guid: 4266355aac4097d4e9dd9f47445d9f2a,
-        type: 3}
-    - target: {fileID: 567375156769320160, guid: 61c009e6a0643514eb9f24f1f9defaf9,
-        type: 3}
-      propertyPath: LightsModule.ratio
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 828628015}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61c009e6a0643514eb9f24f1f9defaf9, type: 3}
 --- !u!1 &8760531533523453181
