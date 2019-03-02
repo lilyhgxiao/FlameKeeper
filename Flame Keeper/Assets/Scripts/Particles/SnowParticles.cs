@@ -6,6 +6,7 @@ public class SnowParticles : MonoBehaviour
 {
     public ParticleSystem particles;
     public PlayerControllerSimple player;
+    public float scaleCoefficient = 0.5f;
 
     private List<ParticleCollisionEvent> particleCollisionEvents;
 
@@ -34,7 +35,7 @@ public class SnowParticles : MonoBehaviour
              * If the flame is scled below 0, respawn the player at their last checkpoint.
              */
             int collisionCount = ParticlePhysicsExtensions.GetCollisionEvents(particles, other, particleCollisionEvents);
-            float scaleLightToo = 1.0f - 0.5f * collisionCount;
+            float scaleLightToo = 1.0f - scaleCoefficient * collisionCount;
             player.ScaleLightSource(scaleLightToo);
             if (scaleLightToo <= 0)
             {

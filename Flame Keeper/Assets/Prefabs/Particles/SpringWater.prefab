@@ -4715,9 +4715,10 @@ MonoBehaviour:
   duration: 2.5
   pauseTime: 1.5
   player: {fileID: 0}
-  enableRandomDuration: 0
+  enableRandomDuration: 1
   minDuration: 1
-  maxDuration: 3
-  enableRandomPauseTime: 0
+  maxDuration: 4
+  enableRandomPauseTime: 1
   minPauseTime: 1
-  maxPauseTime: 3
+  maxPauseTime: 4
+  scaleCoefficient: 0.02

@@ -4713,3 +4713,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particles: {fileID: 6534189402702883456}
   player: {fileID: 0}
+  scaleCoefficient: 0.5

@@ -23,6 +23,8 @@ public class SpringWater : MonoBehaviour
     // Random value bounds for pauseTime.
     public float minPauseTime = 0.0f, maxPauseTime = 0.0f;
 
+    public float scaleCoefficient = 0.02f;
+
     // Used to keep track of how long a single loop of the duration is running.
     private float timer = 0.0f;
     // Stores event information for each collided particle per collision.
@@ -95,7 +97,7 @@ public class SpringWater : MonoBehaviour
              * If the flame is scled below 0, respawn the player at their last checkpoint.
              */
             int collisionCount = ParticlePhysicsExtensions.GetCollisionEvents(particles, other, particleCollisionEvents);
-            float scaleLightToo = 1.0f - 0.02f * collisionCount;
+            float scaleLightToo = 1.0f - scaleCoefficient * collisionCount;
             player.ScaleLightSource(scaleLightToo);
             if (scaleLightToo <= 0)
             {
