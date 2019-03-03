@@ -8,6 +8,7 @@ TagManager:
   - Crystal
   - SpringWater
   - LightBearingWisps
+  - OtherWisps
   layers:
   - Default
   - TransparentFX
