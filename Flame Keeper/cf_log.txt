@@ -1,0 +1,5 @@
+Warning: None triangle mesh: bod (file: 'C:\Users\user\Desktop\FlameKeeper\Flame Keeper\Assets\3D Models\Character\chThisOne.fbx') []
+Warning: None triangle mesh: cloak2 (file: 'C:\Users\user\Desktop\FlameKeeper\Flame Keeper\Assets\3D Models\Character\chThisOne.fbx') []
+Warning: None triangle mesh: shawl (file: 'C:\Users\user\Desktop\FlameKeeper\Flame Keeper\Assets\3D Models\Character\chThisOne.fbx') []
+Warning: None triangle mesh: LanternModel:Staff (file: 'C:\Users\user\Desktop\FlameKeeper\Flame Keeper\Assets\3D Models\Character\chThisOne.fbx') []
+Warning: None triangle mesh: LanternModel:Top_Sides_Ring1 (file: 'C:\Users\user\Desktop\FlameKeeper\Flame Keeper\Assets\3D Models\Character\chThisOne.fbx') []

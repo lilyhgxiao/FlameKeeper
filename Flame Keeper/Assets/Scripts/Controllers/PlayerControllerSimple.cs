@@ -185,6 +185,8 @@ public class PlayerControllerSimple : MonoBehaviour, DynamicLightSource
                 audioController.GetComponent<AudioController>().PlayAudioClip(AudioController.AudioClips.jumpNormal);
             }
         }
+
+        Debug.Log("Light Source Value = " + GetLightSourceValue());
     }
 
 
